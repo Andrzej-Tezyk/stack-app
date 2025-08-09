@@ -1,25 +1,24 @@
 import {useEffect, useState} from "react";
 
 interface CountdownTimerProps {
-    initialSeconds: number;
-    onComplete?: () => void;
+    secondsLeft: number;
+    isRunning: boolean;
+    onTick: () => void;
+    // onComplete?: () => void;
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ initialSeconds, onComplete}) => {
-    const [secondsLeft, setSecondsLeft] = useState(initialSeconds);
+const CountdownTimer: React.FC<CountdownTimerProps> = ({ secondsLeft, isRunning, onTick}) => {
 
     useEffect(() => {
-        if (secondsLeft <= 0) {
-            if (onComplete) onComplete();
-            return;
-        }
-    
+        if (!isRunning) return; // pause timer when not running
+        if (secondsLeft <= 0) return;
+
         const interval = setInterval(() => {
-            setSecondsLeft(prev => prev - 1);
+            onTick();
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [secondsLeft, onComplete]);
+    }, [isRunning, secondsLeft, onTick]);
 
     const formatTime = (totalSeconds: number): string => {
         const minutes = Math.floor(totalSeconds / 60);

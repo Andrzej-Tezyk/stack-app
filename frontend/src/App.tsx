@@ -1,7 +1,7 @@
 import './App.css'
-import TrackedActivities from './components/TrackedActivities.jsx'
-import Dashboard from './components/Dashboard.jsx'
-import Pomodoro from './components/Pomodoro.jsx'
+import TrackedActivities from './components/TrackedActivities.tsx'
+import Dashboard from './components/Dashboard.tsx'
+import Pomodoro from './components/Pomodoro.tsx'
 
 
 const today = new Date();

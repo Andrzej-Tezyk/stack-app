@@ -67,14 +67,14 @@ const TrackedActivities: React.FC = () => {
 
     return ( 
         <div className="flex flex-col m-3 w-md border border-gray-400 rounded-2xl border-solid bg-gray-50">
-            <h2 className="flex justify-between m-2 font-semibold">
-                List of tracked activities
+            <h2 className="flex justify-between items-center ml-3 font-semibold text-xl">
+                <span>List of tracked activities</span>
                 <button 
                     className="w-10 h-10 flex items-center justify-center p-0 hover:bg-gray-200 rounded-full transition-colors" 
                     aria-label="Add new activity"
                     onClick={() => setIsAdding(true)}
                 >
-                    <CirclePlus />
+                    <CirclePlus className="text-blue-500"/>
                 </button>
             </h2>
             
@@ -95,13 +95,13 @@ const TrackedActivities: React.FC = () => {
                         <div className="flex gap-2">
                             <button
                                 onClick={handleAddActivity}
-                                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-3xl"
                             >
                                 Add
                             </button>
                             <button
                                 onClick={handleCancel}
-                                className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                                className="px-4 py-2 bg-gray-300 text-gray-700 rounded-3xl hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
                             >
                                 Cancel
                             </button>

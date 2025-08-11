@@ -68,7 +68,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, onDelete, onUpdat
 
             {/* Add Time Form */}
             {isAddingTime && (
-            <div className="bg-blue-50 border border-blue-200 rounded p-1 mb-2 flex">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-1 mb-2 flex">
                 <div className="flex items-center gap-2 m-2">
                     <input
                         type="number"
@@ -83,13 +83,13 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, onDelete, onUpdat
                 <div className="flex flex-1 gap-4 justify-end items-center ml-2 mr-2">
                     <button
                         onClick={handleAddTime}
-                        className="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+                        className="px-3 py-1 bg-blue-500 text-white text-sm rounded-2xl hover:bg-blue-600"
                     >
                         Add
                     </button>
                     <button
                         onClick={handleCancel}
-                        className="px-3 py-1 bg-gray-300 text-gray-700 text-sm rounded hover:bg-gray-400"
+                        className="px-3 py-1 bg-gray-300 text-gray-700 text-sm rounded-2xl hover:bg-gray-400"
                     >
                         Cancel
                     </button>
